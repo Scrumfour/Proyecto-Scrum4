@@ -1,0 +1,309 @@
+*{
+    margin: 1;
+}
+.Encabezado{
+    width: 100%;
+    height: 120px;
+    background-image: url('../Image/camion.jpeg');
+    background-size: 100% 330px;
+    background-repeat:no-repeat;
+    background-position:bottom;                                                                /* Dentro del contenedor se visualiza la parte de abajo de la imagen */
+    border-radius:10px;
+    position: relative;                                                                        /* Permite que otros objetos se posicionen encima*/
+}
+ .Concolor{
+    background-color:rgba(80, 128, 142,1);
+    opacity: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius:10px;
+ }
+ .nombre{
+    font-family: 'Brush Script MT', cursive; 
+    font-size: 70px; 
+    font-weight: bold;
+    color: #ffffff;
+    position: absolute;                                                                         /*Objeto se posiciona encima*/
+    top: 0%;
+    left: 8%;
+ }
+ .Menu{
+    position: absolute;                                                                         /*Objeto se posiciona encima*/
+    top: 24%;
+    left: 45%;
+    width: 50%;
+ }
+ /*ELIMINAR EL FORMATO Y ORGANIZAR LA LISTA*/
+ ol{
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-evenly;
+    list-style: none;
+}
+ li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px; 
+    font-weight: bold;
+    color: #ffffff;
+    padding: 0.5em 0.5em;
+    background: none;
+    border: 2px solid #fff;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 12px;
+}
+ li:before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 120%;
+    background-color: rgba(105,162,151,0.8);
+    top: 50%;
+    transform: skewX(30deg) translate(-150%, -50%);
+    transition: all 0.8s;
+}
+   
+li:hover {
+    background-color: rgb(80,128,142);
+    color: #fff;
+    box-shadow: 0 2px 0 2px rgb(105,162,151);
+}
+   
+li:hover::before {
+    transform: skewX(30deg) translate(150%, -50%);
+    transition-delay: 0.1s;
+}
+   
+li:active {
+    transform: scale(0.9);
+}
+.Mainsecciones{
+    width: 1342px;
+    height: 380px; 
+    display: grid;                                                                              /* Usa CSS Grid */
+    grid-template-columns: 50% 50%;                                                             /* Dos columnas: 50% para las secciones, 50% para el aside */
+    grid-template-rows: 1fr 1fr;                                                                /* Dos filas en la primera columna, cada una tomando el 50% del alto */
+}
+.seccion1{
+    background-color: rgba(80, 128, 142,0.5);
+    grid-column: 1;                                                                             /* Coloca en la primera columna */
+    grid-row: 1;                                                                                /* Coloca en la primera fila */
+    margin: 5px;
+    margin-top: 10px;
+    border-radius:10px;
+    display: grid;
+    grid-template-columns: 70% 30%;                                                            
+    grid-template-rows: 20% 80%;
+    
+}
+.seccion2{
+    background-color: rgba(80, 128, 142,0.5);
+    grid-column: 1;                                                                             /* Coloca en la primera columna */
+    grid-row: 2;                                                                                /* Coloca en la segunda fila */
+    margin: 5px;
+    border-radius:10px;
+    display: grid;
+    grid-template-columns: 70% 30%;                                                            
+    grid-template-rows: 20% 80%;
+}
+.Titulo{
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    margin: 6px;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 25px; 
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;                                                                  /* Centra el contenido horizontalmente */
+    align-items: center;                                                                      /* Centra el contenido verticalmente */   
+}
+.Texto{
+    grid-column: 1;
+    grid-row: 2;
+    margin: 8px;
+    margin-top: 3px;
+    font-family: Arial, Helvetica, sans-serif; 
+    padding: 5px; 
+    font-weight: bold;
+    font-size: 14px; 
+    color: #000000;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: justify;                                                                    
+}
+
+.Imagen1{
+    background-image: url('../Image/Negocios.png');
+    background-size: 130px 130px; 
+    background-position: center;
+    background-repeat:no-repeat;
+    grid-column: 2;
+    grid-row: 2;
+    margin: 8px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+.Imagen2{
+    background-image: url('../Image/beneficios.png');
+    background-size: 130px 130px; 
+    background-position: center;
+    background-repeat:no-repeat;
+    grid-column: 2;
+    grid-row: 2;
+    margin: 8px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+.seccion3{
+    grid-column: 2;                                                                             /* Coloca en la segunda columna */
+    grid-row: 1 / span 2;                                                                       /* Hace que ocupe ambas filas de la segunda columna */
+    margin: 5px;
+    margin-top: 10px;
+    border-radius:10px;
+    background-size: 100% 400px;
+    background-repeat:no-repeat;
+    background-position:bottom; 
+}
+footer{
+    width: 99%;
+    height: 110px;    
+    margin: 5px;
+}
+.contenedor{
+    background-color: rgba(80, 128, 142,0.5);
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border-radius: 16px;
+    border: 1px solid rgba(119, 123, 152, 0.3);  
+    display: flex;                                                      /*Se usa flexbos*/
+    align-items: center;                                                /*Centra verticalmente el contenido interno*/
+    justify-content: center;                                            /* Todo lo que esta adentro del contenedor se centra horizontalmnte*/
+ }
+
+ /*ESTILO DEL FORMULARIO*/
+
+ .borde {
+    width: 500px;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.1);                     /* Fondo translúcido */
+    backdrop-filter: blur(10px);                                      /* Difumina el contenido detrás */
+    -webkit-backdrop-filter: blur(10px);                              /* Soporte para navegadores Webkit */
+    border: 2px solid rgba(0, 0, 0, 0.3);                           /* Borde semitransparente */
+    display: flex;                                                    /* Uso de flexbox */
+    align-items: center;                                              /* Centra el contenido verticalmente */
+    justify-content: center;                                          /* Centra el contenido horizontalmente */
+    padding: 8px;
+    border-radius: 50px;                                              /* Esquinas redondeadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);                       /* Sombra sutil */
+}
+ .header{
+    width: 400px;
+    height: 10%;
+    background-color:rgba(105,162,151,0.5);
+    font-family: 'Raleway', sans-serif;  
+    text-align: center;
+    font-size: 30px; 
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid  rgb(0, 0, 0);
+    box-shadow: 4px 4px  rgba(221,216,196,0.5);
+ }
+ .leabel{
+    font-family: Arial, Helvetica, sans-serif;  
+    font-size: 18px; 
+    font-weight: bold;
+ }
+ .textbox{
+    font-family: Arial, Helvetica, sans-serif;  
+    width: 400px;                                                               /*Se adapta al 98% de ancho de la columna*/
+    height: 30px;
+    background-color:rgba(105,162,151,0.5);
+    margin: 0 auto;                                                           /*Alinea el elemento (textbox) al contenedor*/
+    border-radius: 5px;
+    border: 2px solid  rgb(0, 0, 0);
+    box-shadow: 4px 4px  rgba(221,216,196,0.5);
+    font-size: 15px; 
+    font-weight: bold;
+ }
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    width: 150px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #020202;
+    background-color: rgba(221,216,196,0.8);
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px rgba(105,162,151,0.8);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+button:hover {
+    background-color: rgba(105,162,151,0.8);
+    color: rgb(0, 0, 0);
+    border: 2px solid #000000;
+    box-shadow: 5px 5px 0px rgba(221,216,196,0.8);
+  }
+  
+button:active {
+    background-color: rgba(163,201,168,0.8);
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+  /*FORMUARIO DE REGISTRO*/
+  .textbox2{
+    font-family: Arial, Helvetica, sans-serif;  
+    width: 200px;                                                               /*Se adapta al 98% de ancho de la columna*/
+    height: 20px;
+    background-color:rgba(221,216,196,0.5);
+    margin: 0 auto;                                                           /*Alinea el elemento (textbox) al contenedor*/
+    border-radius: 5px;
+    border: 2px solid  rgb(0, 0, 0);
+    box-shadow: 4px 4px  rgba(105,162,151,0.5);
+    font-size: 15px; 
+    font-weight: bold;
+ }
+ .textbox3{
+    font-family: Arial, Helvetica, sans-serif;  
+    width: 412px;                                                               /*Se adapta al 98% de ancho de la columna*/
+    height: 20px;
+    background-color:rgba(221,216,196,0.5);
+    margin: 0 auto;                                                           /*Alinea el elemento (textbox) al contenedor*/
+    border-radius: 5px;
+    border: 2px solid  rgb(0, 0, 0);
+    box-shadow: 4px 4px  rgba(105,162,151,0.5);
+    font-size: 15px; 
+    font-weight: bold;
+ }
+ /*FOOTER*/
+ footer{
+    width: 99%;
+    height: 100px;
+    background-image: url('../Image/camion.jpeg');
+    background-size: 100% 330px;
+    background-repeat:no-repeat;
+    background-position:top;                                                                /* Dentro del contenedor se visualiza la parte de abajo de la imagen */
+    border-radius:20px;
+    position: relative;                                                                        /* Permite que otros objetos se posicionen encima*/
+    margin: 5px;
+    margin-top: 10px;
+}
+.nombre2{
+    font-family: 'Brush Script MT', cursive; 
+    font-size: 70px; 
+    font-weight: bold;
+    color: #ffffff;
+    position: absolute;                                                                         /*Objeto se posiciona encima*/
+    top: 0%;
+    left: 40%;
+ }

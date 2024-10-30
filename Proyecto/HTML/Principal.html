@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/Estiloproyecto.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>LogiQuest</title>
+    </head>
+    <body></body>
+    <header class="Encabezado">
+        <div class="Concolor"></div>
+        <div class="nombre">LogiQuest</div>
+        <nav class="Menu">
+            <ol>
+                <li>Inicio</li>
+                <li>¿Quiénes somos?</li>
+                <li>Servicios</li>
+                <li>Contactanos</li>
+            </ol>
+        </nav>
+    </header>
+    <body>
+        <main class="Mainsecciones">
+            <section class="seccion1">
+                <div class="Titulo">¡Tu mayor aliado para tus negocios!</div>
+                <div class="Texto">En LogiQuest, entendemos que el éxito de tus negocios depende de contar con un aliado 
+                    confiable que te acompañe en cada paso del camino. Por eso nos dedicamos a ser intermediarios entre 
+                    compradores y vendedores en diversos mercados como tecnologia, productos alimenticios, logistica y 
+                    asesoria en areas como la juridica, marketing y ventas de Eventos.</div>
+                <div class="Imagen1"></div>
+            </section>
+            <section class="seccion2">
+                <div class="Titulo">¿Por que unirte a la comunidad LogiQuest?</div>
+                <div class="Texto">Logiquest te dara la oportunidad de acceder a una amplia gama de productos y servicios 
+                    en diferentes sectores, agilizando las transacciones y reduciendo el tiempo de búsqueda de clientes o proveedores.
+                    Ademas de brindarte transparencia y seguridad con un sistema de calificaciones y reseñas que te ayudan a  
+                    verificar la reputación de compradores o vendedores antes de hacer negocios.</div>
+                <div class="Imagen2"></div>
+            </section> 
+            <aside class="seccion3">
+                <div class="contenedor">
+                    <div class="borde">
+                        <form id="Form_iniciosesion">
+                            <table>
+                                <td class="header" colspan="3">Iniciar sesión</td>
+                                <tr>
+                                    <td style="padding: 4px;"></td>                                         <!--Fila vacia para crear un espacio-->                     
+                                </tr>
+                                <tr>
+                                    <td class="leabel"><i class="fas fa-envelope"></i> Correo*</td>
+                                </tr>
+                                <tr>
+                                    <td><input class="textbox" id="CORREO" type="email" maxlength="30" placeholder="correo" required></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px;"></td>                                         <!--Fila vacia para crear un espacio-->                     
+                                </tr>
+                                <tr>
+                                    <td class="leabel"><i class="fas fa-lock"></i> Contraseña*</td>
+                                </tr>
+                                <tr>
+                                    <td><input class="textbox" id="CONTRASEÑA" type="password" maxlength="30" placeholder="contraseña" required></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px;"></td>                                         <!--Fila vacia para crear un espacio-->                     
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center;"><button type="button">INGRESAR</button></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px;"></td>                                         <!--Fila vacia para crear un espacio-->                     
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center;"><button type="button" onclick="Registro()">REGISTRARSE</button></td>
+                                </tr>
+                            </table>
+                        </form>
+                        
+                        <form id="Form_registro" style="display: none;">
+                            <table >
+                                <td class="header" colspan="2">Registrarse</td>
+                                <tr>
+                                    <td style="padding: 4px;" colspan="2"></td>                                                            
+                                </tr>
+                                <tr>
+                                    <td class="leabel"><i class="fas fa-user"></i> Nombre</td>
+                                    <td class="leabel"><i class="fas fa-id-card"></i> Apellido</td>
+                                </tr>
+                                <tr>
+                                    <td><input class="textbox2" id="NAME" type="text" maxlength="30" placeholder="Nombre" required></td>
+                                    <td><input class="textbox2" id="LASTNAME" type="text" maxlength="30" placeholder="Apellido" required></td>
+                                </tr>
+                                <tr>
+                                    <td class="leabel" colspan="2"><i class="fas fa-envelope"></i> Correo</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><input class="textbox3" id="CORREO" type="email" maxlength="30" placeholder="correo" required></td>
+                                </tr>
+                                 <tr>
+                                    <td class="leabel"><i class="fas fa-lock"></i> Contraseña</td>
+                                    <td class="leabel"><i class="fas fa-check"></i> Confirmar contraseña</td>
+                                </tr>
+                                <tr>
+                                    <td ><input class="textbox2" id="CONTRASEÑA" type="password" maxlength="30" placeholder="contraseña" required></td>
+                                     <td ><input class="textbox2" id="CONFIRMACION" type="password" maxlength="30" placeholder="confirma contraseña" required></td>
+                                </tr>
+                                <tr>
+                                    <td class="leabel" colspan="2"><i class="fas fa-phone"></i> Telefono</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><input class="textbox3" id="NUMERO" type="number" maxlength="10" placeholder="Numero de celular" required></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px;"></td>                                         <!--Fila vacia para crear un espacio-->                     
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center;"><button type="button">ENVIAR</button></td>
+                                    <td style="text-align: center;"><button onclick="Iniciosesion();">ANTERIOR</button></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </aside>
+        </main>
+        <script>
+            function Iniciosesion() {
+                document.getElementById('Form_registro').style.display = 'none';
+                document.getElementById('Form_iniciosesion').style.display = 'block';
+            }
+    
+            function Registro() {
+                document.getElementById('Form_iniciosesion').style.display = 'none';
+                document.getElementById('Form_registro').style.display = 'block';
+            }
+        </script>  
+    </body>
+    <footer>
+        <div class="Concolor"></div>
+        <div class="nombre2">LogiQuest</div>
+    </footer>
+</html>
