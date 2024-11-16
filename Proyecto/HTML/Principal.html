@@ -67,7 +67,7 @@
                                     <td style="padding: 4px;"></td>                                         <!--Fila vacia para crear un espacio-->                     
                                 </tr>
                                 <tr>
-                                    <td style="text-align: center;"><button type="button">INGRESAR</button></td>
+                                    <td style="text-align: center;"><button type="button" onclick="Verificardatos()">INGRESAR</button></td>
                                 </tr>
                                 <tr>
                                     <td style="padding: 4px;"></td>                                         <!--Fila vacia para crear un espacio-->                     
@@ -96,46 +96,38 @@
                                     <td class="leabel" colspan="2"><i class="fas fa-envelope"></i> Correo</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2"><input class="textbox3" id="CORREO" type="email" maxlength="30" placeholder="correo" required></td>
+                                    <td colspan="2"><input class="textbox3" id="EMAIL" type="email" maxlength="30" placeholder="correo" required></td>
                                 </tr>
                                  <tr>
                                     <td class="leabel"><i class="fas fa-lock"></i> Contraseña</td>
                                     <td class="leabel"><i class="fas fa-check"></i> Confirmar contraseña</td>
                                 </tr>
                                 <tr>
-                                    <td ><input class="textbox2" id="CONTRASEÑA" type="password" maxlength="30" placeholder="contraseña" required></td>
-                                     <td ><input class="textbox2" id="CONFIRMACION" type="password" maxlength="30" placeholder="confirma contraseña" required></td>
+                                    <td ><input class="textbox2" id="PASSWORD" type="password" maxlength="30" placeholder="contraseña" required></td>
+                                     <td ><input class="textbox2" id="CONFIRMATION" type="password" maxlength="30" placeholder="confirma contraseña" required></td>
                                 </tr>
                                 <tr>
                                     <td class="leabel" colspan="2"><i class="fas fa-phone"></i> Telefono</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2"><input class="textbox3" id="NUMERO" type="number" maxlength="10" placeholder="Numero de celular" required></td>
+                                    <td colspan="2"><input class="textbox3" id="NUMBER" type="number" maxlength="10" placeholder="Numero de celular" required></td>
                                 </tr>
                                 <tr>
                                     <td style="padding: 4px;"></td>                                         <!--Fila vacia para crear un espacio-->                     
                                 </tr>
                                 <tr>
-                                    <td style="text-align: center;"><button type="button">ENVIAR</button></td>
-                                    <td style="text-align: center;"><button onclick="Iniciosesion();">ANTERIOR</button></td>
+                                    <td style="text-align: center;"><button type="button" onclick="Registrardatos();" >ENVIAR</button></td>
+                                    <td style="text-align: center;"><button type="button" onclick="Iniciosesion();">ANTERIOR</button></td>
                                 </tr>
                             </table>
                         </form>
                     </div>
                 </div>
             </aside>
-        </main>
-        <script>
-            function Iniciosesion() {
-                document.getElementById('Form_registro').style.display = 'none';
-                document.getElementById('Form_iniciosesion').style.display = 'block';
-            }
-    
-            function Registro() {
-                document.getElementById('Form_iniciosesion').style.display = 'none';
-                document.getElementById('Form_registro').style.display = 'block';
-            }
-        </script>  
+        </main> 
+        <script src="../SCRIPT/Formularios.js"></script>
+        <script src="../SCRIPT/Verificacion.js"></script>
+        <script src="../SCRIPT/Registro.js"></script>
     </body>
     <footer>
         <div class="Concolor"></div>
